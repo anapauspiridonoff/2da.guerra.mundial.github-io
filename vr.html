@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modo VR — 1944: Una ventana al pasado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">1944: <strong>Una ventana al pasado</strong></div>
+  <nav>
+    <a href="index.html">Experiencia</a>
+    <a href="historia.html">Historia y mapa</a>
+    <a href="vr.html" aria-current="page">Modo VR</a>
+    <a href="quiz.html">Quiz</a>
+  </nav>
+</header>
+
+<div class="page-header">
+  <span class="eyebrow">🥽 Modo VR</span>
+  <h1>Vista dividida para gafas de cartón</h1>
+  <p>Esta vista divide la escena en dos imágenes, una para cada ojo, tal como
+     funcionan las gafas VR sencillas de cartón para celular (tipo Google Cardboard).</p>
+</div>
+
+<div class="vr-toolbar">
+  <a href="index.html" class="btn ghost">
+    ← Volver a la experiencia normal
+  </a>
+
+  <button id="enableVRMotion" class="btn brass">
+    📱 Activar movimiento
+  </button>
+</div>
+
+<div class="vr-stage">
+  <div class="vr-eye">
+    <div class="scene-wrap" id="sceneVrLeft" style="height:100%;">
+      <div class="scene-pan"></div>
+    </div>
+  </div>
+  <div class="vr-eye">
+    <div class="scene-wrap" id="sceneVrRight" style="height:100%;">
+      <div class="scene-pan"></div>
+    </div>
+  </div>
+</div>
+
+<div class="vr-note">
+  <strong style="font-family:var(--font-display);display:block;margin-bottom:0.3rem;">Nota técnica — qué parte es una adaptación</strong>
+  Este "Modo VR" es una <strong>simulación visual</strong> pensada para exposiciones escolares:
+  divide la pantalla en dos vistas idénticas de la escena, imitando el efecto estéreo de
+  unas gafas de cartón.
+</div>
+
+<!-- Sonido ambiental de guerra: un único MP3, en loop, para toda la experiencia VR -->
+<audio id="warSound" src="audio/ambiente-guerra.mp3" loop preload="auto"></audio>
+
+<footer>
+  Proyecto escolar educativo — “1944: Una ventana al pasado”.
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

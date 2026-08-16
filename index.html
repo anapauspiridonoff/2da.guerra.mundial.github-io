@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1944: Una ventana al pasado</title>
+<meta name="description" content="Experiencia educativa e interactiva sobre la Segunda Guerra Mundial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">1944: <strong>Una ventana al pasado</strong></div>
+  <nav>
+    <a href="index.html" aria-current="page">Experiencia</a>
+    <a href="historia.html">Historia y mapa</a>
+    <a href="vr.html">Modo VR</a>
+    <a href="quiz.html">Quiz</a>
+  </nav>
+</header>
+
+<!-- ============ PORTADA ============ -->
+<section class="hero" id="portada">
+  <div class="hero__bg" id="heroBg"></div>
+  <div class="hero__scrim"></div>
+  <div class="hero__content">
+    <div class="hero__stamp">Archivo histórico · Proyecto escolar</div>
+    <h1>1944: Una ventana al pasado</h1>
+    <p class="subtitle">Una experiencia inmersiva sobre la Segunda Guerra Mundial</p>
+    <p class="hero__intro">
+      Entre 1939 y 1945, el mundo vivió el conflicto armado más grande de la historia.
+      Esta experiencia te invita a recorrer una calle europea de 1944, observar objetos
+      cotidianos y descubrir cómo la guerra transformó la vida de soldados y civiles por igual.
+    </p>
+    <a href="#experiencia" class="btn brass" id="entrarBtn">Entrar a la experiencia</a>
+    <p class="hero__disclaimer">
+      Este proyecto tiene fines educativos. No representa violencia gráfica ni glorifica
+      el conflicto: su objetivo es comprender el contexto histórico, la vida cotidiana
+      y las consecuencias humanas de la guerra.
+    </p>
+  </div>
+</section>
+
+<!-- ============ ESCENA 360 ============ -->
+<section id="experiencia">
+  <div class="scene-wrap" id="scene360">
+    <div class="scene-pan"></div>
+    <div class="scene-ui">
+      <div class="scene-hint">Arrastra para mirar alrededor · toca los puntos brillantes</div>
+      <div class="zoom-controls">
+        <button data-zoom-out aria-label="Alejar">−</button>
+        <button data-zoom-in aria-label="Acercar">+</button>
+      </div>
+    </div>
+  </div>
+  <div class="scene-caption">
+    <span class="eyebrow">Calle europea, 1944</span>
+    <h2>Explora una escena de la vida cotidiana en guerra</h2>
+    <p>Recorre la calle y selecciona la radio, el diario, la mesa de mapas, el equipo del
+       soldado, la casa civil y la torre del reloj para descubrir seis historias breves
+       sobre 1939–1945.</p>
+  </div>
+</section>
+
+<!-- ============ FICHA DE EXPEDIENTE (modal) ============ -->
+<div class="modal-overlay" id="dossierOverlay">
+  <div class="dossier" role="dialog" aria-modal="true" aria-labelledby="dossierTitle">
+    <button class="dossier__close" aria-label="Cerrar">✕</button>
+    <div class="dossier__stamp">Expediente histórico</div>
+    <div class="dossier__date"></div>
+    <h3 class="dossier__icon-title" id="dossierTitle"></h3>
+    <p class="dossier__body"></p>
+  </div>
+</div>
+
+<footer>
+  Proyecto escolar educativo — “1944: Una ventana al pasado” · Contenido con fines
+  históricos y didácticos, sin intención de glorificar el conflicto.
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
